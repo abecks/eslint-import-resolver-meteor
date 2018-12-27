@@ -14,8 +14,7 @@ exports.resolve = function (source, file, config) {
   if (resolve.isCore(source)) return { found: true, path: null }
 
   if (source.startsWith('meteor/')) {
-    var meteorRoot = findMeteorRoot(file, meteorDir)
-    return resolveMeteorPackage(source, meteorRoot)
+    return { found: true, path: null }
   }
 
   var meteorSource = source
